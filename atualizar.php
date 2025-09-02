@@ -18,7 +18,8 @@
     $stmt->bindParam(':quantidade_novo', $quantidade_novo);
 
     if ($stmt->execute()) {
-        echo "Produto atualizado com sucesso!";
+        //echo "Produto atualizado com sucesso!";        
+        header("location: confirma_atualiza.php");
     } else {
         echo "Erro ao atualizar produto.";
     }
